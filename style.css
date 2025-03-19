@@ -1,52 +1,156 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* NAVIGATION */
+nav {
+    background: #0073e6;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+}
+
 /* HERO SECTION */
 .hero {
-    background: url('asu-logo.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    background: url('asu-logo.png') no-repeat center center/cover;
     color: white;
-    position: relative;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Dark overlay to improve text visibility */
-.hero .overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-/* Hero Text */
 .hero h1 {
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 10px;
+    font-weight: 700;
     animation: fadeIn 1s ease-in-out;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
-/* Button */
 .btn {
     display: inline-block;
     background: #ffc72c;
     color: #8c1d40;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn:hover {
     background: #8c1d40;
     color: white;
+    transform: scale(1.05);
 }
 
-/* Fade-in Animation */
+/* SECTION STYLES */
+section {
+    background: white;
+    padding: 50px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* PROJECT CARDS */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 45%;
+    min-width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* SKILLS SECTION */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills-container span {
+    background: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #777;
+}
+
+/* ANIMATIONS */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
