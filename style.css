@@ -1,6 +1,6 @@
 /* HERO SECTION */
 .hero {
-    background: url('asu-logo.png') no-repeat center center/cover;
+    background: url('images (1).png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -8,6 +8,11 @@
     text-align: center;
     color: white;
     position: relative;
+}
+
+/* If you renamed `images (1).png` to `asu-background.png`, use this: */
+.hero {
+    background: url('asu-background.png') no-repeat center center/cover;
 }
 
 /* Dark overlay for readability */
